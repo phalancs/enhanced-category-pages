@@ -33,6 +33,7 @@ abstract class WP_Custom_Post {
 				'_builtin' => false, // It's a custom post type, not built in
 				'capability_type' => 'post',
 				'hierarchical' => false,
+				'exclude_from_search' => true, //dont make them searchable!
 				'rewrite' => array("slug" => $this->_name), // Permalinks
 				'query_var' => $this->_name, // This goes to the WP_Query schema
 				'supports' => array('title'/*,'custom-fields'*/), // Let's use custom fields for debugging purposes only
